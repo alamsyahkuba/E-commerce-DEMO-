@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Store</title>
+    <link rel="icon"
+        href="data:image/png;base64,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">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* background-image: url(https://img.freepik.com/premium-vector/online-supermarket-seamless-pattern_111409-1010.jpg); */
+            /* margin: 0; */
+            /* padding: 0; */
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e4f4fd;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+        nav {
+            background: linear-gradient(90deg, #1f211c 0%, #434e50 100%, #e4f4fd 0%);
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+
+        label.logo {
+            color: white;
+            font-size: 30px;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+        }
+
+        a:hover,
+        a.cart {
+            color: #ffffff;
+            font-weight: 100;
+            background: linear-gradient(90deg, #1f211c 0%, #434e50 100%, #e4f4fd 0%);
+            transition: .5s;
+            box-shadow: 1px 1px 1px 1px rbga(2, 2, 92, .354);
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        @media screen and (max-width: 952px) {
+            label.logo {
+                font-size: 18px;
+                padding-left: 50px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 1070px) {
+            .checkbtn {
+                display: block;
+            }
+
+            nav ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color: #000000b6;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            a:hover,
+            a.cart {
+                background: none;
+                color: #0082e6;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+        }
+
+        span {
+            color: red;
+        }
+
+        main {
+            margin-top: 100px;
+            margin-left: 20px;
+        }
+
+        main li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        main p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #reset-btn {
+            margin-top: 20px;
+            background-color: #434e50;
+            color: #e4f4fd;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #reset-btn:hover {
+            background-color: #1f211c;
+        }
+
+        footer {
+            margin-top: 350px;
+            background: linear-gradient(90deg, #1f211c 0%, #434e50 100%, #e4f4fd 0%);
+            width: 100%;
+            color: #e4f4fd;
+            text-align: center;
+            padding: 60px;
+            padding-bottom: 60px;
+            font-size: x-large;
+            line-height: 20px;
+            /* bottom: 0; */
+            /* position: relative; */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <label for="" class="logo">
+            <i class="far fa-s" aria-hidden="true"></i>
+            <i class="far fa-s" aria-hidden="true"></i>
+        </label>
+
+        <ul>
+            <li><a href="home.html" class="home">Home</a></li>
+            <li><a href="shop.html" class="shop">Shopping</a></li>
+            <li><a href="cart.html" class="cart">Cart <span id="cart-count">0</span></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <ul id="cart-items"></ul>
+        <p class="cart-total">Total: $<span id="cart-total">0</span></p>
+        <button id="reset-btn" onclick="resetCart()">Reset Cart</button>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2023 Simple Store. All right reserved.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/44f8e98353.js" crossorigin="anonymous"></script>
+    <script>
+        function displayCart() {
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            var cartList = document.getElementById("cart-items");
+            var cartCountElement = document.getElementById("cart-count"); // Menambahkan baris ini
+
+            var total = 0;
+
+            // Clear the cart first
+            cartList.innerHTML = '';
+
+            // Populate the cart with items
+            cartItems.forEach(function (item) {
+                var listItem = document.createElement("li");
+                listItem.textContent = item.product + ' - $' + item.price;
+                cartList.appendChild(listItem);
+                total += item.price;
+            });
+
+            // Update the total price
+            var cartTotal = document.getElementById("cart-total");
+            cartTotal.textContent = total;
+
+            // Update the cart count in the navbar
+            cartCountElement.textContent = cartItems.length; // Menambahkan baris ini
+        }
+
+        function resetCart() {
+            localStorage.removeItem("cart");
+            displayCart();
+        }
+
+        window.onload = displayCart;
+    </script>
+
+</body>
+
+</html>

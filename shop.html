@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Store</title>
+    <link rel="icon"
+        href="data:image/png;base64,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">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* background-image: url(https://img.freepik.com/premium-vector/online-supermarket-seamless-pattern_111409-1010.jpg); */
+            /* margin: 0; */
+            /* padding: 0; */
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e4f4fd;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+        nav {
+            background: linear-gradient(90deg, #1f211c 0%, #434e50 100%, #e4f4fd 0%);
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+
+        label.logo {
+            color: white;
+            font-size: 30px;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+        }
+
+        a:hover,
+        a.shop {
+            color: #ffffff;
+            font-weight: 100px;
+            background: linear-gradient(90deg, #1f211c 0%, #434e50 100%, #e4f4fd 0%);
+            transition: .5s;
+            box-shadow: 1px 1px 1px 1px rbga(2, 2, 92, .354);
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        @media screen and (max-width: 952px) {
+            label.logo {
+                font-size: 18px;
+                padding-left: 50px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+        }
+
+        @media screen and (max-width: 1070px) {
+            .checkbtn {
+                display: block;
+            }
+
+            ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color: #000000b6;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            a:hover,
+            a.shop {
+                background: none;
+                color: #0082e6;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+        }
+
+        #product {
+            margin: 20px;
+            padding-top: 10vh;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            /* margin: 0 200px 0 50px; */
+        }
+
+        .product {
+            line-height: 30px;
+            background-color: white;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 20px;
+            width: 275px;
+            text-align: center;
+            box-shadow: 1px 1px 10px #1f211c;
+        }
+
+        img {
+            width: 100px;
+            aspect-ratio: 4/3;
+            object-fit: contain;
+        }
+
+        button {
+            padding: 0 10px;
+            border: none;
+            border-radius: 25px;
+            height: 30px;
+            width: auto;
+            cursor: pointer;
+            background-color: #434e50;
+            transition: .2s ease-in-out;
+            color: #e4f4fd;
+        }
+
+        button:hover {
+            background-color: #e4f4fd;
+            color: #1f211c;
+            transform: scale(1.2);
+        }
+
+        footer {
+            margin-top: 200px;
+            background: linear-gradient(90deg, #1f211c 0%, #434e50 100%, #e4f4fd 0%);
+            width: 100%;
+            color: #e4f4fd;
+            text-align: center;
+            padding: 60px;
+            padding-bottom: 60px;
+            font-size: x-large;
+            line-height: 25px;
+            /* bottom: 0; */
+            /* position: relative; */
+        }
+
+        span {
+            color: red;
+        }
+
+        select {
+            box-shadow: 1px 1px 10px solid #1f211c;
+            border-radius: 25px;
+            padding: 10px;
+        }
+
+        select:hover{
+            background-color: #e4f4fd;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <label for="" class="logo">
+            <i class="far fa-s" aria-hidden="true"></i>
+            <i class="far fa-s" aria-hidden="true"></i>
+        </label>
+
+        <ul>
+            <li><a href="home.html" class="home">Home</a></li>
+            <li><a href="shop.html" class="shop">Shopping</a></li>
+            <li><a href="cart.html" class="cart">Cart <span id="cart-count">0</span></a></li>
+        </ul>
+
+        <select id="category-dropdown" onchange="filterProducts()">
+            <option value="all">All Categories</option>
+            <option value="shoes">Shoes</option>
+            <option value="clothing">Clothing</option>
+            <option value="accessories">Accessories</option>
+            <!-- Add more categories as needed -->
+        </select>
+    </nav>
+
+    <main>
+        <div>
+            <div id="product">
+                <div class="product" data-category="shoes">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT1z3VWT7ClbV3wE9nRrGkWSv9HEOPTyBviVliid9BpKkNTT2Zy75DiTShW4TWoRY9ys3wgg4HCIoIjeP5hiN5c9iIYAF8fBHHTfDF9yXlSUEXHaRT8zRuP&usqp=CAE"
+                        alt="Sneakers Black/White">
+                    <h2>Sneakers</h2>
+                    <p>Price: $50</p>
+                    <button onclick="addToCart('Sneakers', 50)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="clothing">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTWGCFcxNU2KXWt5fvZ_mYCQSHpmFFUlQy53zHd4y3fSo2R6JWmUhNqbXyBR8fcELWRa36h79JNgEXWzNrjOVoTWEAosrNW6M-wx15P6brnw1-k970ouWCZ&usqp=CAE"
+                        alt="Leather Jacket">
+                    <h2>Jacket</h2>
+                    <p>Price: $80</p>
+                    <button onclick="addToCart('Jacket', 80)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="accessories">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRtrw_2x9E9Oy29ANwMikoWxwRPnsjSBgk58FZN8f8tSSiULgE_Z61z64v1yka1wjYGadW3a2jfDkr0ykSE_S-2cnv0bkeMwJ8IvBsyV-m2fVFbpdqBux-J&usqp=CAE"
+                        alt="Black Backpack">
+                    <h2>Backpack</h2>
+                    <p>Price: $55</p>
+                    <button onclick="addToCart('Backpack', 55)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="clothing">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQoXPhVyoMmHz68LcdPFfagySH1X5Er5skJhmGms5em2W81r7ET4TUT63C3qx0bxpNfgE3PckQB4RtBrhvJrXo-9_mpfTDuNatL6nwpT3GKT-VLfSeO4lRaXg&usqp=CAE"
+                        alt="Jeans">
+                    <h2>Jeans</h2>
+                    <p>Price: $100</p>
+                    <button onclick="addToCart('Jeans', 100)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="clothing">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSG-bPQzbEg26bM5q9-bxfvjYz-pM-mj89YTo0Ke4QM9k703tEbsEIK0yDN6ZJwgDUf7hftg6CHIjGAc57MplQhc216VDfYCXIdmL1GTXiIp-0Obcb2B4kZ&usqp=CAE"
+                        alt="Sweater">
+                    <h2>Sweater</h2>
+                    <p>Price: $95</p>
+                    <button onclick="addToCart('Sweater', 95)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="clothing">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTuFiewcHO3DWoMwLFo-3QA3IVZCHNEF567yBzhI9kGVYVR0S_o0TW5aARS8ps1hSJu-1xpwsGTd2B9oflkl1nCAxPbFXrGZRNn4SP2NlmBOeayj8FhF7K7JQ&usqp=CAE"
+                        alt="Hoodie">
+                    <h2>Hoodie</h2>
+                    <p>Price: $120</p>
+                    <button onclick="addToCart('Hoodie', 120)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="clothing">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTTmOWu9cdKrkidAp1RQsaxwzRPXbZQpMZknMI88NH1LyRE57iU_XA0AFV2FYXZAdnjBUAywzvYyhGPC38iIjPOUg2r6LT4iKpHAC83Zs8xWGO4b0rWVEcO&usqp=CAE"
+                        alt="T-Shirt">
+                    <h2>T-Shirt</h2>
+                    <p>Price: $90</p>
+                    <button onclick="addToCart('T-Shirt', 90)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="clothing">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQTHGuyR-FKA1yur_uLnitB9VXEexxRidvZyvraPQY7pg_o6qZTE1GAZH9O3nfUDf-HNeQS_KUx9QL7X0soLzhnyvg87Oe77-IjXLLV7Rve&usqp=CAE"
+                        alt="Gray Tuxedo">
+                    <h2>Gray Tuxedo</h2>
+                    <p>Price: $2500</p>
+                    <button onclick="addToCart('Gray Tuxedo', 2500)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="clothing">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR94XmRm63Zd_0393e9IJ90xXdlrgXfu2CEE-EmvloO-dB7eQHH81UlZohvb9fV4L90309BlznzSP42hLWm0qHAkyT9YGCxxFQmIJ-YaB8&usqp=CAE"
+                        alt="Coat">
+                    <h2>Coat</h2>
+                    <p>Price: $200</p>
+                    <button onclick="addToCart('Coat', 200)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="accessories">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSU07S99ER0YZQQPzyltlaEtp0h9XBuyXFXC_sxtv8x8YLxr-GU-xjfdTIetciU3VOrvy4hoALXqKYVisUyDupYzgLpmW4lMA&usqp=CAE"
+                        alt="Watch">
+                    <h2>Rolex</h2>
+                    <p>Price: $5000</p>
+                    <button onclick="addToCart('Rolex Watch', 5000)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="accessories">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSY0QPvH674ucQAv0jkbji4nbXl9ymBMsdEFW0c-KmtftFDbxf4l68zHB9ZI2kE9eV5hqvqzGQNQA9TAEOv9WuhWuP4Mlv-03CpaD-bif3BJCA8ZcB8q2HR&usqp=CAE"
+                        alt="Earrings">
+                    <h2>Earrings</h2>
+                    <p>Price: $260</p>
+                    <button onclick="addToCart('Earrings', 260)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="accessories">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRyIa8cMkiaf90EIfw0srAiITRoFII1T6fGc7ceDyol-RuEoZjWOs6BaHQx9NDpUW00tmzND2kuELpv85tVrq9wDsGlf2c2DPUFA2T6g4OLHeGT6LAkqc5z&usqp=CAE"
+                        alt="Necklace">
+                    <h2>Necklace</h2>
+                    <p>Price: $400</p>
+                    <button onclick="addToCart('Necklace', 400)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="clothing">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSgBaY-NGi27hQOheyopuXGAXbSs13BFcPCzGZOraZhj_W3nE9WztIi0ytp11NjExrqZqMZoINow9jAnr1ehGs51xS8yuEPZQ7UHH4UT9U&usqp=CAE"
+                        alt="Sleeveless">
+                    <h2>Sleeveless</h2>
+                    <p>Price: $900</p>
+                    <button onclick="addToCart('Sleeveless', 900)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="shoes">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR-zvqW0RRN1DBH4lVWF7QQmT4dHzdHHaiPfFA1CSYAdemPOMJwgkng3a7t0htIIBJ4PDr9SxBfb1cTdbvoW2UHIstP-WbnTGehBPiqZyzi5m-_987NjBEQ&usqp=CAE"
+                        alt="Boots">
+                    <h2>Boots</h2>
+                    <p>Price: $700</p>
+                    <button onclick="addToCart('Boots', 700)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="shoes">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSV97XLEVltmWfL3eItFaF5emOyhQ8dj0Ss0P1Fam9JbSdBNhvXjEVNxge-YvIXeD7i2X5z_31q2Rqo316eJpvAKfZpej5YGIxN5SPzB_hzymerTSPwTki0nQ&usqp=CAE"
+                        alt="Pantofel">
+                    <h2>Pantofel</h2>
+                    <p>Price: $500</p>
+                    <button onclick="addToCart('Pantofel', 500)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="accessories">
+                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/6623eaa2-c5c6-49ac-b5e6-1a9ea14077b0/dri-fit-aerobill-featherlight-perforated-running-cap-0sTv3T.png"
+                        alt="Cap">
+                    <h2>Cap</h2>
+                    <p>Price: $40</p>
+                    <button onclick="addToCart('Cap', 40)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="clothing">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTzlPKOW-nhhbX9NFbQQe_pso3zXlCj8aXg9zyAg2O7v1XRRpgLrk4gd2tSXkm5_aR24dDL9NBClG0HZcoa-8ZQuA_FK5lsnriU24qchuMQ&usqp=CAE"
+                        alt="Black Tuxedo">
+                    <h2>Black Tuxedo</h2>
+                    <p>Price: $3000</p>
+                    <button onclick="addToCart('Black Tuxedo', 3000)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="shoes">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTplZO__3TZa4oGR_FPIfcFv0YsCh0qEzDOUH78tWbsrFjld5jTRVeKcRQ7k8zXedbWm2aitvPDIhCT_mb6XmkxpzvNTb-DphGfM46TfsooreI9qwHJvKL5hy4&usqp=CAE"
+                        alt="High Heels">
+                    <h2>Stiletto Black</h2>
+                    <p>Price: $1500</p>
+                    <button onclick="addToCart('Stiletto Black', 1500)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="shoes">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSbYKwCLDz7TDPiCvhjj2vEvvsdF0yMA3C7ipUVP4uuoPN4YFXlP7xDsRUWSxirgtBxDLLzJacWRl8PlU10nVvleUrY5a--LC2Oj03lnH4&usqp=CAE"
+                        alt="High Heels">
+                    <h2>Stiletto Zip</h2>
+                    <p>Price: $1000</p>
+                    <button onclick="addToCart('Stiletto Zip', 1000)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-category="shoes">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTviwdZCvZcI2bQaqaKAl6eOVQzFoTBMvvhQ_8yz2fBZ2VeeFmx73iQ6ipx9B5ZXVslREH6OPvIsWNj0A7_Tv_ON5J0B9P-pmafTx-oX0wTmkMRgMY5RjAHdo4&usqp=CAE"
+                        alt="High Heels">
+                    <h2>Flavio Cherry</h2>
+                    <p>Price: $1300</p>
+                    <button onclick="addToCart('Flavio Cherry', 1300)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2023 Simple Store. All right reserved.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/44f8e98353.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            updateCartCount();
+            populateDropdown(); // Call the function to populate the dropdown
+        });
+
+        function populateDropdown() {
+            // Populate the dropdown menu with unique categories
+            // ...
+        }
+
+        function addToCart(product, price, category) {
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            cartItems.push({ product: product, price: price, category: category }); // Include category information
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+
+            // Memperbarui jumlah item di keranjang belanja
+            updateCartCount();
+        }
+
+        // Function to filter products based on selected category
+        function filterProducts() {
+            var selectedCategory = document.getElementById('category-dropdown').value;
+            var products = [...document.querySelectorAll('.product')];
+
+            products.forEach(product => {
+                var category = product.getAttribute('data-category');
+
+                // Show or hide products based on the selected category
+                if (selectedCategory === 'all' || selectedCategory === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        // Mengambil data keranjang belanja dari localStorage saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function () {
+            updateCartCount();
+        });
+
+        function addToCart(product, price) {
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            cartItems.push({ product: product, price: price });
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+
+            // Memperbarui jumlah item di keranjang belanja
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            var cartCount = cartItems.length;
+
+            // Memperbarui tampilan jumlah item di navbar
+            var cartCountElement = document.getElementById("cart-count");
+            cartCountElement.textContent = cartCount;
+        }
+
+    </script>
+</body>
+
+</html>
